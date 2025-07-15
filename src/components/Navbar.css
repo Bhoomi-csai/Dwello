@@ -1,0 +1,77 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin: 20px;
+  }
+  
+  .navbar-logo {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .navbar-center {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .navbar-center a {
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    color: #333;
+    padding: 4px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-center a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transition: width 0.4s ease;
+  }
+  
+  .navbar-center a:hover {
+    color: #5a65dd;
+  }
+  
+  .navbar-center a:hover::after {
+    width: 100%;
+  }
+  
+  .navbar-center a.active {
+    color: #667eea;
+  }
+  
+  .navbar-center a.active::after {
+    width: 100%;
+  }
+
+  
+  .login-btn {
+    background-color: #667eea;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #5a65dd;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.4);
+  }
+  
