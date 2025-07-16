@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
-import { MapPin } from 'lucide-react';
+import { MapPin, Bed, Bath } from "lucide-react";
 
 const Home = () => {
   const [allListings, setAllListings] = useState([]);
@@ -20,8 +20,7 @@ const Home = () => {
         const response = await fetch(url);
         const result = await response.json();
         setAllListings(result);
-        setFilteredListings(result); // Default: show all
-        console.log("Fetched properties:", result);
+        setFilteredListings(result);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -93,12 +92,47 @@ const Home = () => {
         <div className="listing-grid">
           {filteredListings.map((listing) => (
             <div className="listing-card" key={listing.id}>
-              <img src={listing.imageUrl} alt={listing.location} />
-              <h3>{listing.location}</h3>
-              <p>${listing.price.toLocaleString()}</p>
-              <div className="location">
-                <p>{listing.bedrooms} Bed • {listing.bathrooms} Bath</p>
-                <p location= {listing.location}><MapPin /></p>
+              <img
+                src={
+                  listing.imageUrl ||
+                  "https://via.placeholder.com/300x200?text=No+Image"
+                }
+                alt={listing.location}
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src =
+                    "https://via.placeholder.com/300x200?text=No+Image";
+                }}
+              />
+              <div className="listing-info">
+                <div className="info-top">
+                  <h3>{listing.location?.split(",")[0] || "Property"}</h3>
+                  <p className="price">
+                    ${listing.price?.toLocaleString() || "N/A"}
+                  </p>
+                </div>
+                <div className="property-location">
+                  <a
+                    href={listing.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="property-location"
+                  >
+                    <MapPin size={14} />
+                    <span>
+                      {listing.location?.split(",").slice(1).join(",") ||
+                        "Unknown"}
+                    </span>
+                  </a>
+                </div>
+                <div className="property-details">
+                  <span>
+                    <Bed size={14} /> {listing.bedrooms ?? "N/A"} Beds
+                  </span>
+                  <span>
+                    <Bath size={14} /> {listing.bathrooms ?? "N/A"} Baths
+                  </span>
+                </div>
               </div>
             </div>
           ))}

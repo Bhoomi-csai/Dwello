@@ -37,8 +37,6 @@ function Services() {
 
   return (
     <div className="services-page">
-      {/* Hero Section */}
-      
         <div className="hero">
             <div className="hero-dark-overlay"></div>
             <div className="hero-overlay">
@@ -46,7 +44,6 @@ function Services() {
             </div>
         </div>
 
-      {/* Carousel Section */}
       <section className="carousel-section">
         <h2>What We Offer</h2>
         <div className="carousel">
@@ -78,7 +75,6 @@ function Services() {
         )}
       </section>
 
-      {/* FAQ Section */}
       <section className="faq-section">
         <h2>Frequently Asked Questions</h2>
         <div className="faq">
