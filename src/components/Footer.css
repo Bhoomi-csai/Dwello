@@ -1,65 +1,77 @@
 .footer {
-    background-color: #222;
-    color: #ccc;
-    padding: 50px 10%;
-    font-size: 15px;
-  }
-  
-  .footer-sections {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: center;
-  }
-  
-  .footer-column {
-    flex: 1;
-    min-width: 200px;
-    margin: 20px 0;
-  }
-  
-  .footer-column h4 {
-    color: #fff;
-    margin-bottom: 15px;
-    font-size: 16px;
-  }
-  
-  .footer-column a {
-    display: block;
-    color: #aaa;
-    text-decoration: none;
-    margin: 6px 0;
-    transition: color 0.3s;
-  }
-  
-  .footer-column a:hover {
-    color: #fff;
-  }
-  
-  .footer-column p {
-    margin: 6px 0;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    font-size: 18px;
-  }
-  
-  .social-icons a {
-    color: #aaa;
-    transition: color 0.3s;
-  }
-  
-  .social-icons a:hover {
-    color: #fff;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
-    color: #777;
-  }
-  
+  background-color: #1c1c1e;
+  color: #ccc;
+  padding: 60px 10%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 8px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 8px 0;
+}
+
+.footer-column a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #fff;
+}
+
+.footer-column p {
+  margin: 10px 0;
+}
+
+.footer-column a[href^="mailto"],
+.footer-column a[href^="tel"] {
+  color: #aaa;
+}
+
+.social-icons {
+  display: flex;
+  gap: 18px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #1da1f2;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #888;
+}
