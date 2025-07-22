@@ -6,7 +6,7 @@
 }
 
 .contact-hero {
-  background: conic-gradient(at center bottom, rgb(255, 255, 255), rgb(14, 165, 233), rgb(14, 165, 233));
+  background: #764ba2;
   color: white;
   text-align: center;
   padding: 80px 20px 60px;
@@ -64,7 +64,7 @@
 }
 
 .contact-form button {
-  background: linear-gradient(rgb(10, 15, 26), rgb(41, 46, 52));
+  background: #764ba2;
   color: white;
   padding: 12px;
   width: 100%;
@@ -79,13 +79,9 @@
   transition: background 0.3s ease;
 }
 
-.touch{
-  font-weight: bolder;
-  color: #000000;
-}
 
 .contact-form button:hover {
-  background: linear-gradient(rgb(6, 7, 10), rgb(41, 46, 52))
+  background: #9162c0;
 }
 
 .contact-info .info-block {
