@@ -44,7 +44,7 @@ function Navbar() {
 
       <div className={`navbar-center ${menuOpen ? 'active' : ''}`}>
         <NavLink to="/home" onClick={closeMenu}>Home</NavLink>
-        <NavLink to="/listing" onClick={closeMenu}>Explore</NavLink>
+        <NavLink to="/listing" onClick={closeMenu}>Listings</NavLink>
         <NavLink to="/about" onClick={closeMenu}>About</NavLink>
         <NavLink to="/services" onClick={closeMenu}>Services</NavLink>
         <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>

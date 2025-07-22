@@ -4,30 +4,23 @@ import "./Contact.css";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [sent, setSent] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 2000);
-    setForm({ name: "", email: "", message: "" });
-  };
+ 
 
   return (
     <div className="contact-page">
       <div className="contact-hero">
         <h1>
-          Get in <samp className="touch">Touch</samp>
+          Get in Touch
         </h1>
         <p>
-          We’d love to hear from you. Let
-          <samp className="touch">’s start a conversation.</samp>{" "}
+          We’d love to hear from you. Let's start a conversation.{" "}
         </p>
       </div>
 
       <div className="contact-wrapper">
         <div className="contact-grid">
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form className="contact-form" >
             <h2>Send Message</h2>
             <input
               type="text"
@@ -51,8 +44,7 @@ const Contact = () => {
               required
             />
             <button type="submit">
-              <Send size={16} />
-              {sent ? " Sent!" : " Send Message"}
+              <Send size={16} />Send Message
             </button>
           </form>
 

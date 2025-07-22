@@ -33,14 +33,8 @@ function App() {
     <Router>
       {user && <Navbar />}
       <Routes>
-        <Route 
-          path="/login" 
-          element={user ? <Navigate to="/home" /> : <Login />} 
-        />
-        <Route 
-          path="/register" 
-          element={user ? <Navigate to="/home" /> : <Register />} 
-        />
+        <Route path="/login" element={user ? <Navigate to="/home" /> : <Login />} />
+        <Route path="/register" element={user ? <Navigate to="/home" /> : <Register />} />
         {user && (
           <>
             <Route path="/home" element={<Home />} />

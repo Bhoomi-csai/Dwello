@@ -33,7 +33,6 @@ const servicesList = [
 ];
 
 function Services() {
-  const [selectedService, setSelectedService] = useState(null);
 
   return (
     <div className="services-page">
@@ -50,8 +49,7 @@ function Services() {
           {servicesList.map((service) => (
             <div
               key={service.id}
-              className={`carousel-card ${selectedService?.id === service.id ? 'active' : ''}`}
-              onClick={() => setSelectedService(service)}
+              className="carousel-card"
             >
               <img src={service.image} alt={service.title} />
               <h3>{service.title}</h3>
@@ -60,19 +58,6 @@ function Services() {
           ))}
         </div>
 
-        {selectedService && (
-          <div className="service-details">
-            <div className="details-text">
-              <h3>{selectedService.title}</h3>
-              <p>{selectedService.details}</p>
-            </div>
-            <img
-              className="details-image"
-              src={selectedService.image}
-              alt={selectedService.title}
-            />
-          </div>
-        )}
       </section>
 
       <section className="faq-section">
