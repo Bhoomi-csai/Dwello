@@ -1,6 +1,6 @@
 # Dwello
 
-Dwello is a modern real estate web application that helps users discover, search, and explore property listings with ease. Built with React, Firebase Authentication, and styled using Tailwind CSS, Dwello offers a seamless and responsive user experience.
+Dwello is a modern real estate web application that helps users discover, search, and explore property listings with ease. Built with React, Firebase Authentication, and styled using CSS, Dwello offers a seamless and responsive user experience.
 
 ## Features
 - User authentication (Email/Password & Google via Firebase)
@@ -12,7 +12,7 @@ Dwello is a modern real estate web application that helps users discover, search
 ## Tech Stack
 - **Frontend:** React, React Router, Vite
 - **Authentication:** Firebase Auth
-- **Styling:** Tailwind CSS
+- **Styling:** CSS
 - **APIs:** Public property listing datasets
 
 ## Getting Started
